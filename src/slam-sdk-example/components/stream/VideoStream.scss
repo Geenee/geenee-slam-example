@@ -1,0 +1,14 @@
+@import '../../styles/shared';
+
+.Container {
+  /*display: none;*/
+
+  &--shown {
+    bottom: 0;
+    display: block;
+    position: fixed;
+    right: 0;
+    transform: scale(0.125);
+    transform-origin: 100% 100%;
+  }
+}
