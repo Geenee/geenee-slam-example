@@ -4,7 +4,7 @@
 
 ### Create new project.
 
-![SLAM%20User%20Guide%206e73d0d347d74a32847204769a63eabc/ui_layers.png](SLAM%20User%20Guide%206e73d0d347d74a32847204769a63eabc/ui_layers.png)
+![https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe4a10ab0-6490-4c80-bb9d-777102dfff82%2Fui_layers.png?table=block&id=6e73d0d3-47d7-4a32-8472-04769a63eabc&width=5000&userId=c2d29741-1a3a-46ba-a21d-e17396bf5cae&cache=v2](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe4a10ab0-6490-4c80-bb9d-777102dfff82%2Fui_layers.png?table=block&id=6e73d0d3-47d7-4a32-8472-04769a63eabc&width=5000&userId=c2d29741-1a3a-46ba-a21d-e17396bf5cae&cache=v2)
 
 ### Add dependencies.
 
