@@ -4,7 +4,7 @@
 
 ### Create new project.
 
-![https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe4a10ab0-6490-4c80-bb9d-777102dfff82%2Fui_layers.png?table=block&id=6e73d0d3-47d7-4a32-8472-04769a63eabc&width=5000&userId=c2d29741-1a3a-46ba-a21d-e17396bf5cae&cache=v2](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe4a10ab0-6490-4c80-bb9d-777102dfff82%2Fui_layers.png?table=block&id=6e73d0d3-47d7-4a32-8472-04769a63eabc&width=5000&userId=c2d29741-1a3a-46ba-a21d-e17396bf5cae&cache=v2)
+![layers](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe4a10ab0-6490-4c80-bb9d-777102dfff82%2Fui_layers.png?table=block&id=6e73d0d3-47d7-4a32-8472-04769a63eabc&width=5000&userId=c2d29741-1a3a-46ba-a21d-e17396bf5cae&cache=v2)
 
 ### Add dependencies.
 
@@ -98,5 +98,3 @@ onStartClick(e: MouseEvent) {
 	})
 }
 ```
-
-[FAQ](https://www.notion.so/FAQ-901a1ca2fdec4f548caffc23c79afdcd)
