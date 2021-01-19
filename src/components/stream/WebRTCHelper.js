@@ -25,7 +25,7 @@ export default class WebRTCHelper {
    * @param {Object} mandatoryConstraints
    * @return {Promise}
    */
-  getVideoStream (video = null, mandatoryConstraints = null) {
+  getVideoStream(video = null, mandatoryConstraints = null) {
     return new Promise((resolve, reject) => {
       // Check general browser compatibility with WebRTC.
       if (!this.isCompatible()) {
@@ -125,7 +125,7 @@ export default class WebRTCHelper {
    * @param {HTMLVideoElement} video
    * @param {Object} constraints
    */
-  getRawStream (video, constraints) {
+  getRawStream(video, constraints) {
     if (process.env.NODE_ENV === 'development') {
       /* eslint-disable-next-line no-console */
       console.log(`WebRTCHelper.getRawStream() with constraints: ${JSON.stringify(constraints, null, '  ')}`);
@@ -191,7 +191,7 @@ export default class WebRTCHelper {
    * @param {Object} constraints
    * @return {Objext}
    */
-  switchWithHeight (constraints) {
+  switchWithHeight(constraints) {
     const widthConstraint = constraints.video.width;
     const heightConstraint = constraints.video.height;
 
@@ -211,7 +211,7 @@ export default class WebRTCHelper {
    * @param {Object} constraints
    * @return {Objext}
    */
-  switchWithHeightIfPortrait (constraints) {
+  switchWithHeightIfPortrait(constraints) {
     if (!this.isPortrait()) {
       return constraints;
     }
@@ -256,7 +256,7 @@ export default class WebRTCHelper {
    * @param {Object} constraints
    * @return {Object}
    */
-  cloneConstraints (constraints) {
+  cloneConstraints(constraints) {
     if (!constraints) {
       return constraints;
     }
@@ -317,7 +317,7 @@ export default class WebRTCHelper {
    * @method createFallbackConstraints
    * @param {Object} constraints
    */
-  createFallbackConstraints (constraints) {
+  createFallbackConstraints(constraints) {
     const fallbackConstraints = [];
 
     if (typeof constraints !== 'object' || !constraints.video) {
@@ -421,16 +421,20 @@ export default class WebRTCHelper {
    * @method isIOS
    * @return {Boolean}
    */
-  isIOS () {
+  isIOS() {
     return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   }
+
+  isAndroid() {
+    return navigator.userAgent.indexOf('Android') !== -1;
+  };
 
   /**
    * @method isSafari
    * @see https://stackoverflow.com/questions/7944460/detect-safari-browser
    * @return {Boolean}
    */
-  isSafari () {
+  isSafari() {
     var ua = navigator.userAgent.toLowerCase();
     if (/safari/i.test(ua)) {
       if (/chrome|crios/i.test(ua)) {
@@ -445,7 +449,7 @@ export default class WebRTCHelper {
    * @method isApple
    * @return {Boolean}
    */
-  isApple () {
+  isApple() {
     return this.isIOS() || this.isSafari();
   }
 
@@ -453,7 +457,7 @@ export default class WebRTCHelper {
    * @method isPortrait
    * @return {Boolean}
    */
-  isPortrait () {
+  isPortrait() {
     try {
       if (window.matchMedia('(orientation: portrait)').matches) {
         return true;
@@ -469,7 +473,7 @@ export default class WebRTCHelper {
    * @method isCompatible
    * @return {Boolean}
    */
-  isCompatible () {
+  isCompatible() {
     return !!navigator.mediaDevices && typeof navigator.mediaDevices.getUserMedia === 'function';
   }
 }

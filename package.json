@@ -3,20 +3,18 @@
   "description": "geenee-example-slam",
   "version": "0.1.0",
   "private": true,
-  "main": "src/index.slam.js",
+  "main": "src",
   "files": [
     "public"
   ],
   "scripts": {
     "clear": "rimraf public",
-    "build:prod": "npm run clear && webpack --mode production",
-    "build": "npm run clear && webpack",
-    "start": "webpack-dev-server --https --open --mode development",
-    "start:ssl": "webpack-dev-server --https --host 0.0.0.0 --mode development",
+    "build": "npm run clear && webpack --mode production",
+    "dev:start": "webpack-dev-server --https --host 0.0.0.0 --mode development --config webpack.dev.js",
     "deps": "yarn install"
   },
   "dependencies": {
-    "@geenee/sdk-slam": "^0.2.0-alpha.11",
+    "@geenee/sdk-slam": "^1.0.5-alpha",
     "@reduxjs/toolkit": "^1.4.0",
     "dotenv-webpack": "^1.8.0",
     "drei": "0.0.72",
@@ -38,6 +36,11 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@babel/types": "^7.11.0",
+    "@types/copy-webpack-plugin": "^6.3.0",
+    "@types/fpsmeter": "^0.3.30",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/node": "^14.14.16",
     "autoprefixer": "^9.7.3",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
@@ -50,6 +53,8 @@
     "node-sass": "^4.14.1",
     "postcss-scss": "^2.1.1",
     "react-hot-loader": "^4.12.21",
+    "ts-loader": "^8.0.3",
+    "typescript": "^3.9.3",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.9.0",
     "webpack-obfuscator": "^0.18.7"

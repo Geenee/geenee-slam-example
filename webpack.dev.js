@@ -1,19 +1,13 @@
 const path = require('path');
-const Dotenv = require('dotenv-webpack');
-const NODE_ENV = process.env.NODE_ENV || 'development';
-const mode = NODE_ENV === 'production' ? 'production' : 'development';
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const JavaScriptObfuscator = require('webpack-obfuscator');
+const mode = 'development';
 const autoprefixer = require('autoprefixer');
 const BASE_PATH = JSON.stringify('/');
-var JavaScriptObfuscator = require('webpack-obfuscator');
 
 module.exports = {
   entry: ['react-hot-loader/patch', './src'],
-  output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: '[name].[contenthash].js',
-  },
   mode,
   optimization: {
     splitChunks: {
@@ -32,6 +26,9 @@ module.exports = {
     // http: 'empty',
     path: 'empty',
   },
+  resolve: {
+    extensions: [".js", ".jsx", ".tsx", ".ts"]
+  },
   module: {
     rules: [
       {
@@ -39,6 +36,13 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
         },
       },
       {
@@ -153,18 +157,17 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
-      filename: path.resolve(__dirname, './public/index.html')
+      filename: path.resolve(__dirname, './dist/index.html')
     }),
-    new JavaScriptObfuscator(),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: 'bundle.css',
     }),
-    new Dotenv(),
+    // new JavaScriptObfuscator()
   ],
-  // devtool: 'eval-source-map',
+  devtool: 'eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    compress: false,
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
     port: 8080
   },
 };
