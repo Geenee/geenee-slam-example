@@ -4,7 +4,7 @@
 
 ### Create new project.
 
-![layers](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe4a10ab0-6490-4c80-bb9d-777102dfff82%2Fui_layers.png?table=block&id=6e73d0d3-47d7-4a32-8472-04769a63eabc&width=5000&userId=c2d29741-1a3a-46ba-a21d-e17396bf5cae&cache=v2)
+![ui_layers](https://eu-central-1-redbull-attachments-upload.geenee.io/attachments/7ca9f99b-92c5-4d74-9db8-c8f92bb1cfc2/fc78aa9b-be37-4fb6-973d-f73d2294aa30/ui_layers.png)
 
 ### Add dependencies.
 
