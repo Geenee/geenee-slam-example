@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import VideoStream from './stream';
 
-import '@geenee/sdk-slam';
+import '@geenee/geetracker';
 import Scene from '../lib/scene';
 
 const THREE_CAMERA_FOV = 60;
